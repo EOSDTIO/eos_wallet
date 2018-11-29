@@ -1,0 +1,65 @@
+<app-page>
+	<div id="page-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Transfer</h1>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+
+		<div class="row">
+			<!-- /.col-lg-12 -->
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Transfer
+					</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+						<form (submit)="transfer(to, amount, memo)">
+							<div class="form-group input-group">
+								<span class="input-group-addon">@</span>
+								<input class="form-control" id="to" [(ngModel)]="to" name="to" required placeholder="To">
+							</div>
+							<div class="form-group input-group">
+								<span class="input-group-addon">EOS</span>
+								<input class="form-control" [(ngModel)]="amount" name="amount" required placeholder="amount">
+							</div>
+							<div class="form-group input-group">
+								<span class="input-group-addon">Message</span>
+								<input class="form-control" placeholder="" [(ngModel)]="memo" name="memo">
+							</div>
+							<div class="form-group input-group">
+								<button type="submit" class="btn btn-lg btn-success btn-block">Transfer</button>
+							</div>
+						</form>
+					</div>
+					<!-- /.panel-body -->
+				</div>
+				<!-- /.panel -->
+			</div>
+			<!-- /.col-lg-6 -->
+		</div>
+
+		<!-- /.row -->
+	</div>
+	<!-- /#page-wrapper -->
+
+	<div class="modal fade" id="errorTransfer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Error in transfer</h4>
+				</div>
+				<div class="modal-body">
+					Unable to send transfer
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</app-page>

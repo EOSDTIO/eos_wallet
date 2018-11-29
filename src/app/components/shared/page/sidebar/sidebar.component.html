@@ -1,0 +1,25 @@
+<div class="navbar-default sidebar" role="navigation">
+	<div class="sidebar-nav navbar-collapse">
+		<ul class="nav" id="side-menu">
+			<li>
+				<a routerLink="/" routerLinkActive="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+			</li>
+			<li>
+				<a routerLink="/transfer" routerLinkActive="active"><i class="fa fa-exchange fa-fw"></i> Transfer</a>
+			</li>
+			<li>
+				<a routerLink="/currencies" routerLinkActive="active"><i class="fa fa-money fa-fw"></i> Currencies</a>
+			</li>
+			<li>
+				<a routerLink="/actions" routerLinkActive="active"><i class="fa fa-files-o fa-fw"></i> Actions</a>
+			</li>
+			<li>
+				<a routerLink="/settings" routerLinkActive="active"><i class="fa fa-cogs fa-fw"></i> Settings</a>
+			</li>
+			<li>
+				<a routerLink="/login" (click)="logout()" routerLinkActive="active"><i class="fa fa-lock fa-fw"></i> Logout</a>
+			</li>
+		</ul>
+	</div>
+	<!-- /.sidebar-collapse -->
+</div>

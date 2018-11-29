@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<div class="login-panel panel panel-default">
+				<div align="center" style="margin: 5px"><img src="/assets/logo.png" width="100" height="100" /></div>
+				<div class="panel-heading">
+					<h3 class="panel-title" align="center">WalletEOS</h3>
+				</div>
+				<div class="panel-body">
+					<form>
+						<fieldset>
+							<button (click)="login()" class="btn btn-lg btn-success btn-block">Login with Scatter</button>
+						</fieldset>
+						<br>
+						<fieldset>
+							<button class="btn btn-lg btn-warning btn-block disabled">Login with Private Key</button>
+						</fieldset>
+						<br>
+						<br>
+						<fieldset>
+							<button class="btn btn-lg btn-default btn-block disabled">Create Wallet</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="unlockScatter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Unlock Scatter</h4>
+			</div>
+			<div class="modal-body">
+				You need to have Scatter installed and unlocked
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

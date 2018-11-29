@@ -1,0 +1,72 @@
+<app-page>
+	<div id="page-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">{{username}}</h1>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+
+		<!--
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Balance
+					</div>
+					<div class="panel-body">
+						<div class="demo-container">
+							<div id="placeholder" class="demo-placeholder"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+
+
+		<div class="row">
+			<!-- /.col-lg-12 -->
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						History
+					</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+						<app-loading *ngIf="!actions"></app-loading>
+						<div *ngIf="actions" class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+								<tr>
+									<th>Account</th>
+									<th>Name</th>
+									<th>Tx</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr *ngFor="let action of actions">
+									<td>{{action.account}}</td>
+									<td>{{action.name}}</td>
+									<!-- <td>
+										<i *ngIf="message.data.from !== username" class="fa fa-long-arrow-right fa-fw" style="color: green"></i>
+										<i *ngIf="message.data.from === username" class="fa fa-long-arrow-right fa-fw" style="color: red"></i>
+									</td> -->
+									<td>{{action.transaction|slice:0:32}}...</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- /.table-responsive -->
+					</div>
+					<!-- /.panel-body -->
+				</div>
+				<!-- /.panel -->
+			</div>
+			<!-- /.col-lg-6 -->
+		</div>
+
+		<!-- /.row -->
+	</div>
+	<!-- /#page-wrapper -->
+</app-page>
